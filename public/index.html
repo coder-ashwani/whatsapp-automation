@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp Scheduler</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>WhatsApp Scheduler</h1>
+      <p class="subtitle">Connect your WhatsApp account and schedule messages in advance.</p>
+
+      <section class="card">
+        <h2>Account connection</h2>
+        <p id="accountState">Checking WhatsApp account status...</p>
+        <p id="accountNumber"></p>
+        <img id="qrImage" alt="WhatsApp QR code" class="qr hidden" />
+      </section>
+
+      <section class="card">
+        <h2>Schedule a message</h2>
+        <form id="scheduleForm">
+          <label>
+            Receiver phone number (with country code)
+            <input type="text" id="to" placeholder="+14155552671" required />
+          </label>
+
+          <label>
+            Message
+            <textarea id="message" rows="4" required></textarea>
+          </label>
+
+          <label>
+            Send at
+            <input type="datetime-local" id="sendAt" required />
+          </label>
+
+          <button type="submit">Add schedule</button>
+        </form>
+        <p id="formFeedback"></p>
+      </section>
+
+      <section class="card">
+        <h2>Scheduled messages</h2>
+        <ul id="scheduleList"></ul>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
