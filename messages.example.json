@@ -1,0 +1,12 @@
+[
+  {
+    "phone": "+14155552671",
+    "message": "Hi! This message is scheduled from my automation script.",
+    "send_at": "2026-02-20 18:30"
+  },
+  {
+    "phone": "+919999999999",
+    "message": "Reminder: team call in 10 minutes.",
+    "send_at": "2026-02-20 18:45"
+  }
+]
